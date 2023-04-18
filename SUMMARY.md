@@ -21,7 +21,7 @@
 
 * [🛠 Getting set up](fundamentals/getting-set-up/README.md)
   * [📝 Setting permissions](fundamentals/getting-set-up/setting-permissions.md)
-  * [🧑 Inviting Members](fundamentals/getting-set-up/inviting-members.md)
+    * [🧑 Inviting Members](fundamentals/getting-set-up/inviting-members.md)
 
 ## Use Cases
 
