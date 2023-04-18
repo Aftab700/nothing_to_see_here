@@ -6,11 +6,11 @@
 
 * [💡 What we do](overview/what-we-do.md)
 * [✨ Our Features](overview/our-features.md)
- * w[do](overview/what-we-do.md)
- * a[do](overview/what-we-do.md)
-  * s[do](overview/what-we-do.md)
-  * q[do](overview/what-we-do.md)
-   * w[do](overview/what-we-do.md)
+ * [do](overview/what-we-do.md)
+ * [do](overview/what-we-do.md)
+  * [do](overview/what-we-do.md)
+  * [do](overview/what-we-do.md)
+   * [do](overview/what-we-do.md)
 
 ## Product Guides
 
