@@ -6,3 +6,14 @@
 - https://spflashtools.com/
 - https://github.com/daynix/UsbDk/releases/
 - https://droidfilehost.com/download/download-libusb-win32-devel-filter-1-2-6-0-zip/
+
+## Delete folder in windows
+
+```
+takeown /f .\Ruby31-x64\ /r
+
+icacls .\Ruby31-x64\ /grant administrators:F /t
+
+rd .\Ruby31-x64\
+```
+
