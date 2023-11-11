@@ -1,0 +1,33 @@
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.required::before {
+  content:"*";
+  color: red;
+}
+
+.column1 {
+  flex: 14%;
+}
+
+.column2 {
+  flex: 18%;
+}
+
+.column3 {
+  flex: 20%;
+}
+
+.column4 {
+  flex: 40%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
