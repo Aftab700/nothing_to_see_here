@@ -1,0 +1,11 @@
+CREATE TABLE Customer (
+  ConsumerId INT NOT NULL PRIMARY KEY,
+  CustomerName VARCHAR(50) NOT NULL,
+  Email VARCHAR(255) NOT NULL,
+  MobileNumber VARCHAR(15) NOT NULL,
+  UserId VARCHAR(20) NOT NULL,
+  Password VARCHAR(30) NOT NULL,
+  ConfirmPassword VARCHAR(30) NOT NULL,
+  Status VARCHAR(10) NOT NULL DEFAULT 'Active'
+);
+
