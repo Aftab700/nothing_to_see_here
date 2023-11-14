@@ -1,11 +1,19 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
+import init_db_package.init_db;
+
 @WebServlet("/Register")
 public class Register extends HttpServlet {
+    private static Connection connection;
+
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
         System.out.println("GET /Register....");
@@ -17,7 +25,7 @@ public class Register extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
+        connection = init_db.connect_mysql();
         System.out.println("POST /Register....");
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
@@ -45,20 +53,47 @@ public class Register extends HttpServlet {
 
             return;
         } else {
-            System.out.println("Consumer  Registration successful.");
+            System.out.println("Consumer  Registration successful....");
             req.getRequestDispatcher("/Register_confirmation.html").include(req, res);
-            out.println("<script>document.getElementById(\"customer_id_message\").innerHTML = \"" + consumer_number + "\";\n");
+            out.println("<script>document.getElementById(\"customer_id_message\").innerHTML = \"" + consumer_number
+                    + "\";\n");
             out.println("document.getElementById(\"customer_name_message\").innerHTML = \"" + user_name + "\";\n");
-            out.println("document.getElementById(\"mobile_number_message\").innerHTML = \"" + mobile_number + "\";\n</script>");
-            
-            // connect to database later
+            out.println("document.getElementById(\"mobile_number_message\").innerHTML = \"" + mobile_number
+                    + "\";\n</script>");
 
+            // connect to database
+            try {
+                connection = init_db.connect_mysql();
+                PreparedStatement ps = connection.prepareStatement(
+                        "INSERT INTO Customer (ConsumerId, bill_number, user_title, CustomerName, Email, MobileNumber, UserId, Password) VALUES\r\n"
+                                + "(?, ?, ?, ?, ?, ?, ?, ?)");
+                ps.setString(1, consumer_number);
+                ps.setString(2, bill_number);
+                ps.setString(3, user_title);
+                ps.setString(4, user_name);
+                ps.setString(5, email);
+                ps.setString(6, "+"+country_code+" "+mobile_number);
+                ps.setString(7, user_id);
+                ps.setString(8, pwd);
+                Integer rs = ps.executeUpdate();
+                System.out.println(rs);
+                if (rs > 0) {
+                    System.out.println("New Registration data added to customer table.....");
+                }else{
+                    System.out.println("New Registration data not added to table.......");
+                }
+                // connection.close();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 
     public static String check_form_data(String consumer_number, String bill_number, String user_title,
             String user_name, String email, String country_code, String mobile_number, String user_id, String pwd,
             String conf_pwd) {
+
+        connection = init_db.connect_mysql();
         if (!consumer_number.matches("\\d{13}")) {
             System.out.println("consumer_number not valid");
             return "invalid Consumer Number!";
@@ -94,6 +129,48 @@ public class Register extends HttpServlet {
         if (!pwd.equals(conf_pwd)) {
             System.out.println("conf_pwd not valid");
             return "invalid Confirm Password!";
+        }
+        try {
+            connection = init_db.connect_mysql();
+            PreparedStatement ps = connection
+                    .prepareStatement("SELECT ConsumerId FROM Customer WHERE ConsumerId = ?");
+            ps.setString(1, consumer_number);
+            ResultSet rs = ps.executeQuery();
+            System.out.println();
+            if (rs.next()) {
+                return "Consumer Number already exists!";
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            connection = init_db.connect_mysql();
+            PreparedStatement ps = connection
+                    .prepareStatement("SELECT UserId FROM Customer WHERE UserId = ?");
+            ps.setString(1, user_id);
+            ResultSet rs = ps.executeQuery();
+            System.out.println();
+            if (rs.next()) {
+                return "UserId already exists!";
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            connection = init_db.connect_mysql();
+            PreparedStatement ps = connection
+                    .prepareStatement("SELECT Email FROM Customer WHERE Email = ?");
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            System.out.println();
+            if (rs.next()) {
+                return "Email already exists!";
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         return "ok";
     }
