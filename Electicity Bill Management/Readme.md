@@ -25,6 +25,8 @@ Java Version: `java 20.0.2 2023-07-18`
   - `D:\Application\java\`
 - MAVEN_HOME
   - `D:\Application\java\apache-maven-3.9.5`
+- CATALINA_HOME
+  - `D:\Application\java\apache-tomcat-9.0.82`
 - PATH
   - `D:\Application\mysql\bin`
   - `D:\Application\java\apache-maven-3.9.5\bin`
