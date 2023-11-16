@@ -35,7 +35,17 @@ Java Version: `java 20.0.2 2023-07-18`
  ### Build webapp
 
 - `cd` to to `webapp` directory and run any one of the following command
- - `mvn clean package`
- - `mvn install`
+- `mvn clean package`
+- `mvn install`
+- It will create `war` file at `target/webapp.war`
+
+### Running tomcat server
+
+- Put the `war` file file which was created in previous step at `apache-tomcat-9.0.82\webapps`
+- `cd` to `apache-tomcat-9.0.82\bin` and run the following command
+- `.\startup.bat start`
+- webserver should be running on `http://localhost:8080/`
+- project will be at `http://localhost:8080/webapp/`
+
 
 
