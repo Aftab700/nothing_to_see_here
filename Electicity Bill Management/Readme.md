@@ -30,6 +30,10 @@ Java Version: `java 20.0.2 2023-07-18`
   - `D:\Application\java\apache-maven-3.9.5\bin`
   - `D:\Application\java\bin`
 
- 
+ ### Build webapp
+
+- `cd` to to `webapp` directory and run any one of the following command
+ - `mvn clean package`
+ - `mvn install`
 
 
