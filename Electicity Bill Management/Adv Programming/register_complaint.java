@@ -3,15 +3,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
-import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
-
 // Main class
-public class Registration {
+public class register_complaint {
     public static void main(String[] args) {
         // Creating a scanner object for user input
         Scanner sc = new Scanner(System.in);
@@ -44,7 +41,8 @@ public class Registration {
         long mobileNumber = sc.nextLong();
 
         // Creating a complaint object with the user input
-        Complaint complaint = new Complaint(customerName, consumerNumber, address, mobileNumber, complaintType, category, landmark, problem);
+        Complaint complaint = new Complaint(customerName, consumerNumber, address, mobileNumber, complaintType,
+                category, landmark, problem);
 
         // Registering the complaint
         complaint.registerComplaint();
@@ -113,7 +111,8 @@ class Complaint extends Consumer {
     private String problem;
 
     // Constructor
-    public Complaint(String customerName, int consumerNumber, String address, long mobileNumber, String complaintType, String category, String landmark, String problem) {
+    public Complaint(String customerName, int consumerNumber, String address, long mobileNumber, String complaintType,
+            String category, String landmark, String problem) {
         // Calling the super class constructor
         super(customerName, consumerNumber, address, mobileNumber);
         this.complaintType = complaintType;
@@ -204,10 +203,11 @@ class Complaint extends Consumer {
             e.printStackTrace();
         }
     }
+
     // Method to check if the complaint table exists
     public static boolean tableExists(Connection conn, String tableName) throws SQLException {
         DatabaseMetaData meta = conn.getMetaData();
-        ResultSet rs = meta.getTables(null, null, tableName, new String[] {"TABLE"});
+        ResultSet rs = meta.getTables(null, null, tableName, new String[] { "TABLE" });
         return rs.next();
     }
 
@@ -235,8 +235,7 @@ class Complaint extends Consumer {
             System.out.println("Created table " + tableName);
         } else {
             // Print a message
-            //System.out.println("Table " + tableName + " already exists");
+            // System.out.println("Table " + tableName + " already exists");
         }
     }
 }
-
