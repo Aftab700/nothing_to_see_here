@@ -1,0 +1,51 @@
+description: "Personal website of Aftab Sama"
+google_analytics: G-VSNWH55C79
+ga_analytics: G-VSNWH55C79
+
+# Setup
+title: Home
+url: https://aftab700.github.io/Random-Stoic-Quotes/
+paginate: 1
+baseurl: "/Random-Stoic-Quotes"
+permalink: pretty
+
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jemoji
+  - jekyll-feed
+  - jekyll-remote-theme
+
+markdown: kramdown
+# kramdown:
+#   parse_block_html: true
+
+# Optimize Jekyll
+exclude:
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Options
+
+# Specify the author for blog posts
+author:
+  name: Aftab Sama
+  url: https://github.com/Aftab700/
+  email: mrmr40873@gmail.com
+
+# Custom vars
+version: 0.0.1
+
+# Navbar page list
+nav:
+  - title: About
+    url: /Random-Stoic-Quotes/about
+
