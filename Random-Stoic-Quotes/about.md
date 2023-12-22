@@ -9,7 +9,7 @@ layout: default
 This website generates random stoic quotes inspired by [Ryan Holiday's](https://www.instagram.com/ryanholiday/) [Daily Stoic](https://dailystoic.com/).
 
 
-Website live at [https://aftab700.github.io/Random-Stoic-Quotes](https://aftab700.github.io/Random-Stoic-Quotes)
+Website live at [https://aftab700.github.io/Test/Random-Stoic-Quotes](https://aftab700.github.io/Random-Stoic-Quotes)
 
 for api: [https://aftab700.pythonanywhere.com/api](https://aftab700.pythonanywhere.com/api)
 
