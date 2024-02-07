@@ -4,7 +4,7 @@ ga_analytics: G-T8K5YV4W6E
 
 # Setup
 title: Home
-url: https://aftab700.github.io/Random-Stoic-Quotes/
+url: https://aftab700.github.io/Test
 paginate: 1
 baseurl: "/Random-Stoic-Quotes"
 permalink: pretty
@@ -47,5 +47,5 @@ version: 0.0.1
 # Navbar page list
 nav:
   - title: About
-    url: /Random-Stoic-Quotes/about
+    url: Random-Stoic-Quotes
 
