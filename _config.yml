@@ -6,7 +6,7 @@ ga_analytics: G-T8K5YV4W6E
 title: Home
 url: https://aftab700.github.io/Test
 paginate: 1
-baseurl: "/Random-Stoic-Quotes"
+#baseurl: "/Test"
 permalink: pretty
 
 # Gems
