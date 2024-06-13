@@ -1,0 +1,50 @@
+<script>
+
+
+// Function to change the base URL
+function changeBase(url) {
+  let base = document.querySelector('base');
+  if (!base) {
+    base = document.createElement('base');
+    document.head.appendChild(base);
+  }
+  base.href = url;
+}
+
+// Call the function with the new base URL
+changeBase('http://127.0.0.1:5000/?url=');
+
+
+window.history.pushState = function() {};
+window.history.replaceState = function() {};
+window.location.assign = function() {};
+window.location.replace = function() {};
+
+self.addEventListener('fetch', function(event) {
+  // Check if the request is for a dynamic load
+  //if (/* some condition to identify dynamic loads */) {
+    // Modify the request URL or options here
+    const newUrl = 'http://127.0.0.1:5000/?url=' + event.request.url;
+
+    // Create a new request with the modified URL
+    const modifiedRequest = new Request(newUrl, {
+      method: event.request.method,
+      headers: event.request.headers,
+      mode: event.request.mode,
+      credentials: event.request.credentials,
+      redirect: event.request.redirect
+    });
+
+    // Respond with the fetch of the modified request
+    event.respondWith(fetch(modifiedRequest));
+  //} else {
+    // For other requests, just fetch them as they are
+    //event.respondWith(fetch(event.request));
+  //}
+});
+
+
+
+
+
+</script>
