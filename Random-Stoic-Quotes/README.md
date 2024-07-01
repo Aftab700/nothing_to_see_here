@@ -36,3 +36,7 @@ If you want to receive one free email per day. Inspired by Stoic philosophy [sub
 
 - [https://www.instagram.com/ryanholiday/](https://www.instagram.com/ryanholiday/)
 - [https://twitter.com/RyanHoliday](https://twitter.com/RyanHoliday)
+
+
+![](https://aftab700.pythonanywhere.com/api/github/Test/Random-Stoic-Quotes)
+
