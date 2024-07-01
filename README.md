@@ -33,3 +33,4 @@ icacls .\Ruby31-x64\ /grant administrators:F /t
 rd .\Ruby31-x64\
 ```
 
+![](https://aftab700.pythonanywhere.com/api/github/Test)
