@@ -3,7 +3,7 @@
 This website generates random stoic quotes inspired by [Ryan Holiday's](https://www.instagram.com/ryanholiday/) [Daily Stoic](https://dailystoic.com/).
 
 
-Website live at [https://aftab700.github.io/Random-Stoic-Quotes](https://aftab700.github.io/Test/Random-Stoic-Quotes)
+Website live at [https://aftab700.github.io/Test/Random-Stoic-Quotes](https://aftab700.github.io/Test/Random-Stoic-Quotes)
 
 for api: [https://aftab700.pythonanywhere.com/api](https://aftab700.pythonanywhere.com/api)
 
@@ -36,7 +36,4 @@ If you want to receive one free email per day. Inspired by Stoic philosophy [sub
 
 - [https://www.instagram.com/ryanholiday/](https://www.instagram.com/ryanholiday/)
 - [https://twitter.com/RyanHoliday](https://twitter.com/RyanHoliday)
-
-
-![](https://aftab700.pythonanywhere.com/api/github/Test/Random-Stoic-Quotes)
 
