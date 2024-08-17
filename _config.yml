@@ -4,9 +4,9 @@ description: "Personal website of Aftab Sama | portfolio website"
 
 # Setup
 title: Home
-url: https://aftab700.github.io/Test
+url: https://aftab700.github.io/nothing_to_see_here
 paginate: 1
-#baseurl: "/Test"
+baseurl: "/nothing_to_see_here"
 permalink: pretty
 
 # Gems
@@ -46,9 +46,9 @@ version: 0.0.1
 
 # Navbar page list
 nav:
+  - title: Quotes
+    url: /Random-Stoic-Quotes
+  - title: Website
+    url: /old_website
   - title: About
     url: /about
-  - title: Random-Stoic-Quotes
-    url: /Random-Stoic-Quotes
-  - title: Old Website
-    url: /old_site
