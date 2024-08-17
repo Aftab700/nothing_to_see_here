@@ -1,6 +1,6 @@
-description: "Personal website of Aftab Sama"
-google_analytics: G-T8K5YV4W6E
-ga_analytics: G-T8K5YV4W6E
+description: "Personal website of Aftab Sama | portfolio website"
+#google_analytics: G-T8K5YV4W6E
+#ga_analytics: G-T8K5YV4W6E
 
 # Setup
 title: Home
@@ -39,7 +39,7 @@ sass:
 author:
   name: Aftab Sama
   url: https://github.com/Aftab700/
-  email: mrmr40873@gmail.com
+  email: hi@aftabsama.com
 
 # Custom vars
 version: 0.0.1
@@ -47,5 +47,8 @@ version: 0.0.1
 # Navbar page list
 nav:
   - title: About
-    url: Random-Stoic-Quotes
-
+    url: /about
+  - title: Random-Stoic-Quotes
+    url: /Random-Stoic-Quotes
+  - title: Old Website
+    url: /old_site
