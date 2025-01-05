@@ -1,8 +1,8 @@
-I'm an offensive security enthusiast. I love breaking things and am always eager to learn new skills and techniques and stay up-to-date on the latest threats and vulnerabilities to enhance my security knowledge and capabilities.
+I graduated from Rashtriya Raksha University with a degree in Computer Science and Engineering with specialization in Cyber Security. My interest in Capture the Flag (CTF) competitions helped me secure my first internship at KPMG India, as I was among the top performers in a national CTF competition organized by the KPMG Cyber Security Team. I also ranked among the top 100 in TCS HackQuest Season 7, which led to an employment opportunity with TCS, where I am currently working.
 
-My passion for offensive security and penetration testing led me to obtain my BSCP, CAPen, CEH Practical and a few other certifications. I plan to enroll in further offensive security courses in the future.
+My passion for offensive security and penetration testing led me to obtain certifications such as BSCP, CAPen, and CEH Practical, among others. I plan to enroll in further offensive security courses in the future.
 
-I spend much of my free time on HackTheBox and CTFTime and have participated in renowned Capture the Flag (CTF) competitions, winning several prizes. Apart from security, I enjoy reading about stoicism and psychology.
+In my free time, I actively participate on HackTheBox and CTFTime and have taken part in several prestigious CTF competitions, winning multiple prizes. Besides my interest in security, I enjoy reading about stoicism and philosophy.
 
 You can read my blogs and writeups at https://aftabsama.com.
 
