@@ -3,6 +3,8 @@
 ## Allow ssh on port 2222:
 
 ```bash
+#!/bin/bash
+
 sudo echo "Port 22" | sudo tee -a /etc/ssh/sshd_config
 sudo echo "Port 2222" | sudo tee -a /etc/ssh/sshd_config
 sudo echo "AddressFamily any" | sudo tee -a /etc/ssh/sshd_config
