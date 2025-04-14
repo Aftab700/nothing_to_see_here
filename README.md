@@ -28,3 +28,9 @@ To connect use:
 ```bash
 ssh -p 700 aftab700@IP
 ```
+
+
+
+
+---
+<!-- GitAds-Verify: 3RBEAA7648DDXTQFPEHUA37M7CZ6RDM8 -->
