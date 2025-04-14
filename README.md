@@ -34,3 +34,7 @@ ssh -p 700 aftab700@IP
 
 ---
 <!-- GitAds-Verify: 3RBEAA7648DDXTQFPEHUA37M7CZ6RDM8 -->
+
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=aftab700/nothing_to_see_here@github)](https://gitads.dev/v1/ad-track?source=aftab700/nothing_to_see_here@github)
+
